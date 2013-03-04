@@ -20,6 +20,7 @@ task wrapper(type: Wrapper) {
 
 allprojects {
   group 'ros.rosjava_zeroconf'
+  version = '0.0.0-SNAPSHOT'
   apply plugin: 'java'
   apply plugin: 'osgi'
   apply plugin: 'eclipse'
@@ -36,4 +37,11 @@ allprojects {
 }
 
 dependencies {
+}
+
+jar {
+  manifest {
+   version = '0.0.0-SNAPSHOT'
+   symbolicName = 'org.rosjava_zeroconf'
+  }
 }
